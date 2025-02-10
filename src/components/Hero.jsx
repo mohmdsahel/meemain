@@ -136,7 +136,8 @@ const Hero = () => {
         setCurrentIndex((prev) =>
           prev === cardData.length - 1 ? 0 : prev + 1
         );
-      }, 5000); // Change slide every 5 seconds
+      }, 10000); // Change slide every 7 seconds
+
     }
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
