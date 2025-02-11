@@ -6,6 +6,7 @@ import {
   twitter,
   instagram,
   facebook,
+  linkedin,
 } from "../assets";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -61,6 +62,13 @@ const cardData = [
 ];
 
 export const socials = [
+
+  {
+    id: "0",
+    title: "LinkedIn",
+    iconUrl: linkedin,
+    url: "https://www.linkedin.com/showcase/31205385/admin/dashboard/",
+  },
   {
     id: "1",
     title: "Twitter",
@@ -96,7 +104,7 @@ const Card = ({ data }) => {
     >
       <a href={data.url}>
         <div className="mb-8">
-          <h4 className="text-white text-2xl font-light mb-4">{data.title}</h4>
+          <h4 className="text-white text-2xl font-roboto mb-4">{data.title}</h4>
           <img
             src={data.logo}
             height={150}
@@ -111,12 +119,12 @@ const Card = ({ data }) => {
           <img src={data.mainImage} alt="main" className="w-full rounded-lg" />
         </div>
 
-        <div className="text-white">
+        <div className="text-white font-roboto">
           <p className="text-xl mb-2">
             <i class="fa-solid fa-location-dot mr-2 "></i>
             {data.location}
           </p>
-          <p className="text-2xl font-semibold">
+          <p className="text-2xl font-roboto font-semibold">
             <span className="text-purple-500">•</span> {data.date}
           </p>
         </div>
@@ -136,7 +144,7 @@ const Hero = () => {
         setCurrentIndex((prev) =>
           prev === cardData.length - 1 ? 0 : prev + 1
         );
-      }, 10000); // Change slide every 7 seconds
+      }, 10000); 
 
     }
     return () => clearInterval(interval);
@@ -174,10 +182,10 @@ const Hero = () => {
       </div>
 
       <div className="container relative">
-        <h1 className="tagline font-bold text-lg mb-4 text-center text-n-1/50">
+        <p className="font-roboto text-4xl mb-8 text-center text-n-1">
           Accelerating Innovation in Enterprises with Applied AI & Analytics
           Strategies
-        </h1>
+        </p>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
           <div className="lg:w-[45%] w-full flex flex-col items-center">
             {/* Centered container */}
@@ -218,8 +226,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <Section className="!px-0 !py-7">
-        <div className="container flex flex-col sm:flex-row sm:justify-between justify-center items-center gap-10">
+      <Section className="
+      ">
+        <div className="container absolute bottom-0 flex flex-col sm:flex-row sm:justify-between   gap-10">
           <p className="caption text-n-4 lg:block">
             © 2025. All rights reserved.
           </p>
@@ -230,7 +239,7 @@ const Hero = () => {
                 key={item.id}
                 href={item.url}
                 target="_blank"
-                className="flex items-center justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-n-6"
+                className="flex items-center mb-8 justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-n-6"
               >
                 <img
                   src={item.iconUrl}

@@ -8,6 +8,8 @@ import heroBackground from "./hero/hero-background1.webm";
 import facebook from "./socials/facebook.svg";
 import instagram from "./socials/instagram.svg";
 import twitter from "./socials/twitter.svg";
+import linkedin from "./socials/linkedin.svg";
+
 
 export {
  
@@ -19,6 +21,7 @@ export {
   heroBackground,
   facebook,
   instagram,
+  linkedin,
 
   twitter,
 };

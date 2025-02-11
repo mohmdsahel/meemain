@@ -36,6 +36,7 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-sora)", ...fontFamily.sans],
+        roboto: "var(--font-roboto)",
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
       },

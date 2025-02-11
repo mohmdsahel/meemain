@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 w-full z-50  bg-gradient-to-b from-black/90 to-transparent  lg:backdrop-blur-sm"
+      className="absolute top-0 left-0 w-full z-50  bg-gradient-to-b from-black/90 to-transparent  lg:backdrop-blur-sm"
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[16rem] p-4 xl:mr-8" >
@@ -21,8 +21,8 @@ const Header = () => {
         
 
         
-        <Button className=" ml-auto lg:flex" href="https://lets-talk-b2b.vercel.app/">
-          Login
+        <Button className=" ml-auto lg:flex" href="mailto:info@meenterpriseai.com">
+          Contact
         </Button>
 
 
