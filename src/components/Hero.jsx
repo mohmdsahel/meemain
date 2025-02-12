@@ -1,3 +1,4 @@
+
 import {
   logo3,
   heroBackground,
@@ -11,6 +12,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Section from "./Section";
+import Button from "./Button";
 
 const cardData = [
   {
@@ -58,6 +60,7 @@ const cardData = [
     url: "https://meenterpriseai.com/ae/",
     location: "DUBAI, UAE",
     date: "20th November 2025",
+
   },
 ];
 
@@ -75,19 +78,7 @@ export const socials = [
     iconUrl: twitter,
     url: "#",
   },
-  {
-    id: "2",
-    title: "Instagram",
-    iconUrl: instagram,
-    url: "#",
-  },
-
-  {
-    id: "3",
-    title: "Facebook",
-    iconUrl: facebook,
-    url: "#",
-  },
+ 
 ];
 
 const Card = ({ data }) => {
@@ -104,7 +95,7 @@ const Card = ({ data }) => {
     >
       <a href={data.url}>
         <div className="mb-8">
-          <h4 className="text-white text-2xl font-roboto mb-4">{data.title}</h4>
+          <p className="text-white text-3xl font-roboto mb-4">{data.title}</p>
           <img
             src={data.logo}
             height={150}
@@ -119,14 +110,22 @@ const Card = ({ data }) => {
           <img src={data.mainImage} alt="main" className="w-full rounded-lg" />
         </div>
 
-        <div className="text-white font-roboto">
-          <p className="text-xl mb-2">
+        <div className="text-white">
+          <p className="text-xl font-roboto mb-2">
             <i class="fa-solid fa-location-dot mr-2 "></i>
             {data.location}
           </p>
-          <p className="text-2xl font-roboto font-semibold">
-            <span className="text-purple-500">•</span> {data.date}
-          </p>
+
+          <div className="flex items-center ">
+            <p className="text-2xl  font-roboto">
+               {data.date}
+            
+            </p>
+            <Button className=" ml-auto lg:flex" href={data.url}>
+            Explore
+                    </Button>
+          </div>
+
         </div>
       </a>
     </motion.div>
