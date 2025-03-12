@@ -95,7 +95,7 @@ const Card = ({ data }) => {
     >
       <a href={data.url}>
         <div className="mb-8">
-          <p className="text-white text-3xl font-roboto mb-4">{data.title}</p>
+          <p className="text-white text-xl font-roboto mb-1">{data.title}</p>
           <img
             src={data.logo}
             height={150}
@@ -111,14 +111,14 @@ const Card = ({ data }) => {
         </div>
 
         <div className="text-white">
-          <p className="text-xl font-roboto mb-2">
+          <p className="text-xl font-roboto ">
             <i class="fa-solid fa-location-dot mr-2 "></i>
             {data.location}
           </p>
 
           <div className="flex items-center ">
-            <p className="text-2xl  font-roboto">
-               {data.date}
+            <p className="text-xl  font-roboto">
+            <i class="fa-solid fa-calendar-days mr-1"></i> {data.date}
             
             </p>
             <Button className=" ml-auto lg:flex" href={data.url}>
