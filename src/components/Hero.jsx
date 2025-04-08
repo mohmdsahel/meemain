@@ -1,13 +1,14 @@
 
 import {
-  logo3,
+ 
   heroBackground,
-  logo2,
+
   video,
   twitter,
-  instagram,
-  facebook,
+
   linkedin,
+  KSA,
+ 
 } from "../assets";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -17,50 +18,28 @@ import Button from "./Button";
 const cardData = [
   {
     id: 0,
-    title: "powered by",
-    logo: logo2,
-    mainImage: logo3,
     url: "ttps://meenterpriseai.com/sa/",
-    location: "RIYADH, KSA",
-    date: "1st May 2025",
+    video: KSA
   },
   {
     id: 1,
-    title: "powered by",
-    logo: logo2,
-    mainImage: logo3,
     url: "https://meenterpriseai.com/oman/",
-    location: "MUSCAT, OMAN",
-    date: "14th August 2025",
+    video: KSA
   },
   {
     id: 2,
-
-    title: "powered by",
-    logo: logo2,
-    mainImage: logo3,
     url: "https://meenterpriseai.com/kw/",
-    location: "KUWAIT CITY, KUWAIT",
-    date: "11th September 2025",
+    video:  KSA
   },
   {
     id: 3,
-    title: "powered by",
-    logo: logo2,
-    mainImage: logo3,
     url: "https://meenterpriseai.com/qa/",
-    location: "DOHA, QATAR",
-    date: "16th October 2025",
+    video:  KSA
   },
   {
     id: 4,
-    title: "powered by",
-    logo: logo2,
-    mainImage: logo3,
     url: "https://meenterpriseai.com/ae/",
-    location: "DUBAI, UAE",
-    date: "20th November 2025",
-
+    video:  KSA
   },
 ];
 
@@ -94,38 +73,15 @@ const Card = ({ data }) => {
       className="relative z-1 w-full text-left border border-purple-500/30 rounded-xl p-4 backdrop-blur-sm bg-black/10"
     >
       <a href={data.url}>
-        <div className="mb-8">
-          <p className="text-white text-xl font-roboto mb-1">{data.title}</p>
-          <img
-            src={data.logo}
-            height={150}
-            width={150}
-            alt="logo"
-            className="mb-6"
+        <div className="relative rounded-xl overflow-hidden">
+          <video
+            src={data.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
           />
-        </div>
-
-        <div className="mb-6 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-transparent rounded-lg" />
-          <img src={data.mainImage} alt="main" className="w-full rounded-lg" />
-        </div>
-
-        <div className="text-white">
-          <p className="text-xl font-roboto ">
-            <i class="fa-solid fa-location-dot mr-2 "></i>
-            {data.location}
-          </p>
-
-          <div className="flex items-center ">
-            <p className="text-xl  font-roboto">
-            <i class="fa-solid fa-calendar-days mr-1"></i> {data.date}
-            
-            </p>
-            <Button className=" ml-auto lg:flex" href={data.url}>
-            Explore
-                    </Button>
-          </div>
-
         </div>
       </a>
     </motion.div>
