@@ -13,7 +13,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Section from "./Section";
-import Button from "./Button";
+
 
 const cardData = [
   {
@@ -21,26 +21,26 @@ const cardData = [
     url: "ttps://meenterpriseai.com/sa/",
     video: KSA
   },
-  {
-    id: 1,
-    url: "https://meenterpriseai.com/oman/",
-    video: KSA
-  },
-  {
-    id: 2,
-    url: "https://meenterpriseai.com/kw/",
-    video:  KSA
-  },
-  {
-    id: 3,
-    url: "https://meenterpriseai.com/qa/",
-    video:  KSA
-  },
-  {
-    id: 4,
-    url: "https://meenterpriseai.com/ae/",
-    video:  KSA
-  },
+  // {
+  //   id: 1,
+  //   url: "https://meenterpriseai.com/oman/",
+  //   video: KSA
+  // },
+  // {
+  //   id: 2,
+  //   url: "https://meenterpriseai.com/kw/",
+  //   video:  KSA
+  // },
+  // {
+  //   id: 3,
+  //   url: "https://meenterpriseai.com/qa/",
+  //   video:  KSA
+  // },
+  // {
+  //   id: 4,
+  //   url: "https://meenterpriseai.com/ae/",
+  //   video:  KSA
+  // },
 ];
 
 export const socials = [
